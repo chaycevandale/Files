@@ -1,19 +1,35 @@
-Hi <b>There </b>World <br><br>
-<input id="myText" type=text value="Michael"> <br><br>
+
+Hi <b>there</b> World <br><br>
+
+<input id="myInput" type=text value="Mary"> <br><br>
+
+
 <input type=button value="Run Wow" onclick="{
+
   myOut = document.getElementById('myArea')
-  for (myCount = 1; myCount <= 5; myCount++){
-     myOut.innerHTML += 'Wow '
+  myIn  = document.getElementById('myInput')
+  //alert(myIn.value)
+
+  for (myCount = 5; myCount >= 1; myCount--){
+
+     myOut.innerHTML += myCount + ' ' + myIn.value
+
      if (myCount == 3){
-       myOut.innerHTML += 'Cool '
+
+        myOut.innerHTML += ' Cool'
 
      }
+     myOut.innerHTML +=  '<br>'
   }
+
 }"> <br><br>
 
 
-<div id="myArea" > Your output will go here </div> <br>
-<input type= button value="Show myOut" onclick="{
-  // alert('The variable myOut contains ' + myOut.innerHTML)
-     
+
+<div id="myArea" > Your output will go here <br></div> <br>
+
+<input type=button value="Show myOut" onclick="{
+  
+   alert('The variable myOut contains ' + myOut.innerHTML)
+
 }">
